@@ -44,7 +44,7 @@ class calc {
 }
 $calc = new calc();
 ?>
-<TITLE>PHP Calculator v1</TITLE>
+<TITLE>Calculator</TITLE>
 <form name="calc" action="?page=calc" method="POST">
 Number 1: <input type=text name=value1><br>
 Number 2: <input type=text name=value2><br>
@@ -66,14 +66,6 @@ $oper = $_POST['oper'];
      }
      if(!$oper){
           echo("You must select an operation to do with the numbers!");
-          exit;
-     }
-     if(!eregi("[0-9]", $number1)){
-          echo("Number 1 MUST be numbers!");
-          exit;
-     }
-     if(!eregi("[0-9]", $number2)){
-          echo("Number 2 MUST be numbers!");
           exit;
      }
      if($oper == "add"){
